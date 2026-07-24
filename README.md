@@ -1,4 +1,4 @@
-# agentic-ai-crash-course
+# Blood _work_analyzer
 
 A Streamlit-based blood work analysis app that uses Anthropic to extract lab test values from blood reports and generate a health summary plus an Indian diet recommendation.
 
@@ -38,11 +38,19 @@ A Streamlit-based blood work analysis app that uses Anthropic to extract lab tes
 From the project root:
 
 ```powershell
-cd 2_heath_analysis\streamlit_app
 streamlit run app.py
 ```
 
 Then open the local URL shown in the terminal.
+
+## Deploy to Hugging Face Spaces
+
+- On Hugging Face Spaces, select the `Streamlit` runtime (not Docker) for a free deployment.
+- Make sure `app.py` exists in the repository root.
+- Add `ANTHROPIC_API_KEY` in `Settings` → `Secrets` on the Space.
+- Do not commit your local `.env` file to Git.
+
+If you want to test locally first, keep using the `.env` file with `ANTHROPIC_API_KEY=your_api_key_here`.
 
 ## GitHub Push Instructions
 
@@ -74,7 +82,7 @@ Then open the local URL shown in the terminal.
 4. Add your GitHub remote and push:
 
    ```powershell
-   git remote add origin https://github.com/your-username/your-repo.git
+   git remote add origin https://github.com/eyosiasbisrat/Blood_work_analyzer.git
    git branch -M main
    git push -u origin main
    ```
